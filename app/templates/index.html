@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form method="post" name="re">
+    {% csrf_token %}
+    <input type="text" name="titulo" placeholder="titulo">
+    <input type="number" name="cuartos" placeholder="numero de cuartos">
+    <input type="number" name="banos" placeholder="numero de baños">
+    <input type="number" name="alberca" placeholder="alberca">
+
+    <input type="submit">
+</form>
+
+{% for foo in ard %}
+    {{ foo.datos.cuartos }}
+
+{% endfor %}
+
+</body>
+</html>
